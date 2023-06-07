@@ -5,7 +5,8 @@ const app = require("./app");
 const port = process.env.PORT || 3001;
 
 mongoose
-  .connect("mongodb://localhost/pint-pursuit")
+  .connect(process.env.MONGODB_URI)
+  // .connect("mongodb://localhost/pint-pursuit")
   .then(() => {
     console.log("Connected to the database");
   })
