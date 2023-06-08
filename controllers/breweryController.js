@@ -28,9 +28,9 @@ exports.getBreweries = async (req, res) => {
       } else if (sort_by === "date_asc") {
         sortBreweries.createdAt = "asc";
       } else if (sort_by === "name_asc") {
-        sortBreweries.name = "desc";
-      } else if (sort_by === "name_desc") {
         sortBreweries.name = "asc";
+      } else if (sort_by === "name_desc") {
+        sortBreweries.name = "desc";
       }
     }
 
